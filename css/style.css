@@ -64,7 +64,7 @@ li {
 }
 
 .line-link-bgcolor {
-	background-color: rgb(241, 241, 241);
+	background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(69,69,69,1) 100%);
 }
 
 .delLink {
