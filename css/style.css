@@ -11,10 +11,7 @@ body {
 
 ul,
 ol,
-li,
-p {
-	padding: 0;
-	margin: 0;
+li {
 	list-style: none;
 }
 
@@ -22,54 +19,7 @@ p {
 	max-width: 900px;
 	margin: 50px auto 0;
 	padding: 0 15px;
-	/* position: relative;
-	z-index: 5; */
 }
-
-/* .header {
-	width: 100%;
-	min-height: 732px;
-	background-image: url('./../bg.jpg');
-
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-
-	color: #fff;
-	font-size: 50px;
-
-	position: relative;
-}
-
-.header::after {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background-color: rgba(47, 50, 75, 0.85);
-} */
-
-
-.elem1 {
-	padding: 50px;
-	display: inline-block;
-	background-color: aqua;
-}
-
-.elem2 {
-	padding: 50px;
-	display: inline-block;
-	background-color: blueviolet;
-}
-
-.elem3 {
-	padding: 50px;
-	display: inline-block;
-	background-color: brown;
-}
-
 
 ul {
 	padding: 10px;
@@ -80,69 +30,69 @@ li {
 	padding: 10px;
 	border: 1px solid red;
 	margin-bottom: 10px;
+	display: flex;
+	column-gap: 30px;
 }
 
-td {
-	padding: 5px 10px;
-	border: 1px solid hotpink;
+.button {
+	background-color: olive;
+	outline: 1px solid orangered;
+	padding: 10px 20px;
+	cursor: pointer;
+	margin-bottom: 10px;
+	color: orangered;
+	border-radius: 5px;
+	font-size: 16px;
+	transition: background-color 0.2s ease-in-out;
+}
+.button:hover {
+	background-color: rgb(155, 155, 1);
 }
 
-.bg-red {
-	background-color: rosybrown;
-}
-
-
-.parent {
-	overflow: hidden;
-}
-
-.content {
+.button:active {
 	position: relative;
-	top: -100px;
-	display: inline-block;
-	width: 100px;
-	height: 100px;
-	border: 1px solid blue;
-	transition: top 1s ease-in-out;
-	pointer-events: none;
+	top: 1px
 }
 
-.content.active {
-	top: 0;
-}
-
-
-.none {
-	display: none;
-}
-
-
-.color1 {
+.delete {
 	background-color: red;
 }
-.color2 {
-	background-color: blue;
-}
+
 .line-link {
 	padding: 3px 5px;
 	border: 2px solid green;
 }
+
+.line-link-bgcolor {
+	background-color: rgb(241, 241, 241);
+}
+
 .delLink {
 	padding: 3px 5px;
 	border: 2px solid hotpink;
 }
+
 span {
+	width: 300px;
 	border: 2px solid goldenrod;
+	background-color: transparent;
 }
 
 .text-decor {
 	text-decoration: line-through;
 }
 
-
-
-li {
-	display: flex;
-	column-gap: 30px;
+.change-test {
+	background-color: yellow;
 }
 
+input {
+	padding: 3px 5px;
+	border: none;
+	outline: none;
+	background-color: transparent;
+}
+
+.active-span {
+	border: 2px solid blue;
+}

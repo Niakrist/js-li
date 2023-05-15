@@ -1,7 +1,3 @@
-// Модифицируйте предыдущую задачу так, чтобы под списком был инпут,
-// с помощью которого можно будет добавить новый элемент в конец списка ul.
-// Сделайте так, чтобы новые li также можно было редактировать.
-
 const lists = [11111, 22222, 33333, 44444, 55555, 66666];
 const ul = document.querySelector('ul');
 const btn = document.querySelector('.button');
@@ -41,8 +37,11 @@ function changeText(e) {
     spanText.textContent = ''
     spanText.append(input);
     input.focus();
-
+    self.classList.add('change-test')
+    spanText.classList.add('active-span')
     input.addEventListener('blur', function() {
+      self.classList.remove('change-test')
+      spanText.classList.remove('active-span')
       spanText.textContent = input.value;
     })
   }
@@ -51,7 +50,7 @@ function changeText(e) {
 function clickDelLink(e) {
   e.preventDefault();
   const parent = this.parentElement;
-  parent.classList.add('color1');
+  parent.className = 'delete';
   setTimeout(function() {
     parent.remove()
   }, 300)
@@ -60,8 +59,11 @@ function clickDelLink(e) {
 function clickLineLink(e) {
   e.preventDefault();
   const parent = this.parentElement;
-  parent.classList.toggle('text-decor')
-  this.textContent = parent.className === 'text-decor' ? 'Отменить' : 'Зачеркнуть';
+  const spantext = parent.querySelector('span');
+  parent.classList.toggle('line-link-bgcolor')
+
+  spantext.classList.toggle('text-decor')
+  this.textContent = spantext.className === 'text-decor' ? 'Отменить' : 'Зачеркнуть';
 }
 
 function deleteLink(li) {
