@@ -1,0 +1,148 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+ul,
+ol,
+li,
+p {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.container {
+	max-width: 900px;
+	margin: 50px auto 0;
+	padding: 0 15px;
+	/* position: relative;
+	z-index: 5; */
+}
+
+/* .header {
+	width: 100%;
+	min-height: 732px;
+	background-image: url('./../bg.jpg');
+
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+
+	color: #fff;
+	font-size: 50px;
+
+	position: relative;
+}
+
+.header::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(47, 50, 75, 0.85);
+} */
+
+
+.elem1 {
+	padding: 50px;
+	display: inline-block;
+	background-color: aqua;
+}
+
+.elem2 {
+	padding: 50px;
+	display: inline-block;
+	background-color: blueviolet;
+}
+
+.elem3 {
+	padding: 50px;
+	display: inline-block;
+	background-color: brown;
+}
+
+
+ul {
+	padding: 10px;
+	border: 1px solid green;
+}
+
+li {
+	padding: 10px;
+	border: 1px solid red;
+	margin-bottom: 10px;
+}
+
+td {
+	padding: 5px 10px;
+	border: 1px solid hotpink;
+}
+
+.bg-red {
+	background-color: rosybrown;
+}
+
+
+.parent {
+	overflow: hidden;
+}
+
+.content {
+	position: relative;
+	top: -100px;
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	border: 1px solid blue;
+	transition: top 1s ease-in-out;
+	pointer-events: none;
+}
+
+.content.active {
+	top: 0;
+}
+
+
+.none {
+	display: none;
+}
+
+
+.color1 {
+	background-color: red;
+}
+.color2 {
+	background-color: blue;
+}
+.line-link {
+	padding: 3px 5px;
+	border: 2px solid green;
+}
+.delLink {
+	padding: 3px 5px;
+	border: 2px solid hotpink;
+}
+span {
+	border: 2px solid goldenrod;
+}
+
+.text-decor {
+	text-decoration: line-through;
+}
+
+
+
+li {
+	display: flex;
+	column-gap: 30px;
+}
+
