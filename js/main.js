@@ -9,8 +9,7 @@ for (let i = 0; i < lists.length; i++) {
   span.textContent = lists[i];
   ul.appendChild(li);
 
-
-  li.addEventListener('click', changeText)
+  li.addEventListener('click', changeText);
 
   deleteLink(li);
   addLineLink(li);
@@ -22,13 +21,11 @@ btn.addEventListener('click', function () {
   li.appendChild(span);
   span.textContent = String(ul.children.length + 1).repeat(5);
   ul.appendChild(li);
-  li.addEventListener('click', changeText)
-
+  li.addEventListener('click', changeText);
 
   deleteLink(li);
   addLineLink(li);
 })
-
 
 function changeText(e) {
   const span = this.querySelector('span');
@@ -38,15 +35,15 @@ function changeText(e) {
     const input = document.createElement('input');
     input.type = 'text';
     input.value = spanText.textContent;
-    spanText.textContent = ''
+    spanText.textContent = '';
     spanText.append(input);
     input.focus();
-    self.classList.add('change-test')
-    spanText.classList.add('active-span')
+    self.classList.add('change-test');
+    spanText.classList.add('active-span');
 
     input.addEventListener('blur', function () {
-      self.classList.remove('change-test')
-      spanText.classList.remove('active-span')
+      self.classList.remove('change-test');
+      spanText.classList.remove('active-span');
       spanText.textContent = input.value;
       self.addEventListener('click', changeText);
     })
@@ -59,16 +56,16 @@ function clickDelLink(e) {
   const parent = this.parentElement;
   parent.className = 'delete';
   setTimeout(function () {
-    parent.remove()
-  }, 300)
+    parent.remove();
+  }, 300);
 }
 
 function clickLineLink(e) {
   e.preventDefault();
   const parent = this.parentElement;
   const spantext = parent.querySelector('span');
-  parent.classList.toggle('line-link-bgcolor')
-  spantext.classList.toggle('text-decor')
+  parent.classList.toggle('line-link-bgcolor');
+  spantext.classList.toggle('text-decor');
   this.textContent = spantext.className === 'text-decor' ? 'Отменить' : 'Зачеркнуть';
 }
 
@@ -76,9 +73,9 @@ function deleteLink(li) {
   const delLink = document.createElement('a');
   delLink.href = '#';
   delLink.textContent = 'Удалить';
-  delLink.className = 'delLink'
+  delLink.className = 'delLink';
   li.insertAdjacentElement('beforeend', delLink);
-  delLink.addEventListener('click', clickDelLink)
+  delLink.addEventListener('click', clickDelLink);
 }
 
 function addLineLink(li) {
@@ -87,5 +84,5 @@ function addLineLink(li) {
   lineLink.textContent = 'Зачеркнуть';
   lineLink.className = 'line-link';
   li.insertAdjacentElement('beforeend', lineLink);
-  lineLink.addEventListener('click', clickLineLink)
+  lineLink.addEventListener('click', clickLineLink);
 }
