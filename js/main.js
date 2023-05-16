@@ -48,8 +48,9 @@ function changeText(e) {
       self.classList.remove('change-test')
       spanText.classList.remove('active-span')
       spanText.textContent = input.value;
+      self.addEventListener('click', changeText);
     })
-
+    this.removeEventListener('click', changeText);
   }
 }
 
